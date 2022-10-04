@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 8080;
 app.use([express.json(), cors()]);
 
 // All routes
+app.get("/", (_, res) => res.status(200).json({ message: "Home page" }));
 app.use("/user", userRouter);
 
 // Create server
